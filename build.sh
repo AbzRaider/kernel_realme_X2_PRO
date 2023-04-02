@@ -37,10 +37,7 @@ kernel="out/arch/arm64/boot/Image.gz"
 dtb="out/arch/arm64/boot/dts/qcom/sm8150-v2.dtb"
 dtbo="out/arch/arm64/boot/dtbo.img"
 
-if [ -f "$kernel" ] && [ -f "$dtb" ] && [ -f "$dtbo" ]; then
-	echo -e "\nKernel compiled succesfully! Zipping up...\n"
-fi
-	 git clone https://github.com/AbzRaider/AnyKernel_RMX3.git -b x2PRO ; then
+ git clone https://github.com/AbzRaider/AnyKernel_RMX3.git -b x2PRO 
 		
 	
 	cp $kernel $dtbo AnyKernel_RMX3
