@@ -39,10 +39,10 @@ dtbo="out/arch/arm64/boot/dtbo.img"
 
 if [ -f "$kernel" ] && [ -f "$dtb" ] && [ -f "$dtbo" ]; then
 	echo -e "\nKernel compiled succesfully! Zipping up...\n"
-	if ! git clone -q https://github.com/AbzRaider/AnyKernel_RMX3.git -b x2PRO ; then
-		echo -e "\nCloning AnyKernel3 repo failed! Aborting..."
-		exit 1
-	fi
+fi
+	 git clone https://github.com/AbzRaider/AnyKernel_RMX3.git -b x2PRO ; then
+		
+	
 	cp $kernel $dtbo AnyKernel_RMX3
 	cp $dtb AnyKernel_RMX3/dtb
 	rm -f *zip
@@ -53,7 +53,6 @@ if [ -f "$kernel" ] && [ -f "$dtb" ] && [ -f "$dtbo" ]; then
 	rm -rf AnyKernel_RMX3
 	echo -e "\nCompleted in $((SECONDS / 60)) minute(s) and $((SECONDS % 60)) second(s) !"
 	echo "Zip: $ZIPNAME"
-	gdrive upload --share "$ZIPNAME"
 	curl --upload-file "$ZIPNAME" https://free.keep.sh
 	echo
 else
