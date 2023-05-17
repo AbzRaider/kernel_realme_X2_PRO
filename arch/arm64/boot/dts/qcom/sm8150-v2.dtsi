@@ -1428,7 +1428,7 @@
 			qcom,silver-khz = <1708800>;
 			qcom,gold-khz = <1171200>;
 			qcom,prime-khz = <1497600>;
-			qcom,trip-deg = <80000>;
+			qcom,trip-deg = <82000>;
 		};
 
 		zone@10 {
@@ -1436,7 +1436,7 @@
 			qcom,silver-khz = <1708800>;
 			qcom,gold-khz = <1171200>;
 			qcom,prime-khz = <1497600>;
-			qcom,trip-deg = <82000>;
+			qcom,trip-deg = <86000>;
 		};
 
 		zone@11 {
@@ -1444,7 +1444,7 @@
 			qcom,silver-khz = <1708800>;
 			qcom,gold-khz = <1171200>;
 			qcom,prime-khz = <1497600>;
-			qcom,trip-deg = <85000>;
+			qcom,trip-deg = <90000>;
 		};
 
 		zone@12 {
@@ -1452,7 +1452,7 @@
 			qcom,silver-khz = <1708800>;
 			qcom,gold-khz = <1171200>;
 			qcom,prime-khz = <1497600>;
-			qcom,trip-deg = <90000>;
+			qcom,trip-deg = <96000>;
 		};
 	};
 };
