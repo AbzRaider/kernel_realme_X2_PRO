@@ -2453,20 +2453,6 @@ QDF_STATUS cds_flush_logs(uint32_t is_fatal,
 	return QDF_STATUS_SUCCESS;
 }
 
-/**
- * cds_logging_set_fw_flush_complete() - Wrapper for FW log flush completion
- *
- * This function is used to send signal to the logger thread to indicate
- * that the flushing of FW logs is complete by the FW
- *
- * Return: None
- *
- */
-void cds_logging_set_fw_flush_complete(void)
-{
-	if (cds_is_fatal_event_enabled())
-		wlan_logging_set_fw_flush_complete();
-}
 
 /**
  * cds_set_fatal_event() - set fatal event status

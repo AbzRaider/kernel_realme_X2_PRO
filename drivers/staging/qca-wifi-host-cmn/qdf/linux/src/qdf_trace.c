@@ -3284,8 +3284,8 @@ void qdf_trace_msg_cmn(unsigned int idx,
 		vscnprintf(str_buffer + n, QDF_TRACE_BUFFER_SIZE - n,
 			   str_format, val);
 #if defined(WLAN_LOGGING_SOCK_SVC_ENABLE)
-		wlan_log_to_user(verbose, (char *)str_buffer,
-				 strlen(str_buffer));
+		//wlan_log_to_user(verbose, (char *)str_buffer,
+		//		 strlen(str_buffer));
 		if (qdf_likely(qdf_log_dump_at_kernel_enable))
 			print_to_console(str_buffer);
 #else
@@ -3903,9 +3903,9 @@ qdf_export_symbol(QDF_PRINT_INFO);
 #ifdef WLAN_LOGGING_SOCK_SVC_ENABLE
 void qdf_logging_init(void)
 {
-	wlan_logging_sock_init_svc();
+	//wlan_logging_sock_init_svc();
 	nl_srv_init(NULL, WLAN_NLINK_PROTO_FAMILY);
-	wlan_logging_set_flush_timer(qdf_log_flush_timer_period);
+	//wlan_logging_set_flush_timer(qdf_log_flush_timer_period);
 }
 
 void qdf_logging_exit(void)
@@ -3916,15 +3916,15 @@ void qdf_logging_exit(void)
 
 int qdf_logging_set_flush_timer(uint32_t milliseconds)
 {
-	if (wlan_logging_set_flush_timer(milliseconds) == 0)
+	
 		return QDF_STATUS_SUCCESS;
-	else
-		return QDF_STATUS_E_FAILURE;
+	//else
+	//	return QDF_STATUS_E_FAILURE;
 }
 
 void qdf_logging_flush_logs(void)
 {
-	wlan_flush_host_logs_for_fatal();
+	//wlan_flush_host_logs_for_fatal();
 }
 
 #else

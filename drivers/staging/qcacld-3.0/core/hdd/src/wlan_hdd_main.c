@@ -15335,7 +15335,7 @@ void hdd_deinit(void)
 	wlan_roam_debug_deinit();
 
 #ifdef WLAN_LOGGING_SOCK_SVC_ENABLE
-	wlan_logging_sock_deinit_svc();
+	//wlan_logging_sock_deinit_svc();
 #endif
 
 	wlan_destroy_bug_report_lock();

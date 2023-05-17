@@ -6047,11 +6047,11 @@ int wma_roam_event_callback(WMA_HANDLE handle, uint8_t *event_buf,
 		WMA_LOGE("Invalid vdev id from firmware");
 		return -EINVAL;
 	}
-	wlan_roam_debug_log(wmi_event->vdev_id, DEBUG_ROAM_EVENT,
-			    DEBUG_INVALID_PEER_ID, NULL, NULL,
-			    wmi_event->reason,
-			    (wmi_event->reason == WMI_ROAM_REASON_INVALID) ?
-				wmi_event->notif : wmi_event->rssi);
+	//wlan_roam_debug_log(wmi_event->vdev_id, DEBUG_ROAM_EVENT,
+	//		    DEBUG_INVALID_PEER_ID, NULL, NULL,
+	//		    wmi_event->reason,
+	//		    (wmi_event->reason == WMI_ROAM_REASON_INVALID) ?
+	//			wmi_event->notif : wmi_event->rssi);
 
 	DPTRACE(qdf_dp_trace_record_event(QDF_DP_TRACE_EVENT_RECORD,
 		wmi_event->vdev_id, QDF_TRACE_DEFAULT_PDEV_ID,
