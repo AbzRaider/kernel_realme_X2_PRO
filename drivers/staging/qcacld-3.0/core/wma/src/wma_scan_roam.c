@@ -2321,9 +2321,9 @@ void wma_process_roam_synch_fail(WMA_HANDLE handle,
 			__func__);
 		return;
 	}
-	wlan_roam_debug_log(synch_fail->session_id,
-			    DEBUG_ROAM_SYNCH_FAIL,
-			    DEBUG_INVALID_PEER_ID, NULL, NULL, 0, 0);
+	//wlan_roam_debug_log(synch_fail->session_id,
+	//		    DEBUG_ROAM_SYNCH_FAIL,
+	//		    DEBUG_INVALID_PEER_ID, NULL, NULL, 0, 0);
 
 	/* Hand Off Failure could happen as an exception, when a roam synch
 	 * indication is posted to Host, but a roam synch complete is not
@@ -2921,10 +2921,10 @@ int wma_mlme_roam_synch_event_handler_cb(void *handle, uint8_t *event,
 		goto cleanup_label;
 	}
 
-	wlan_roam_debug_log(synch_event->vdev_id, DEBUG_ROAM_SYNCH_IND,
-			    DEBUG_INVALID_PEER_ID, NULL, NULL,
-			    synch_event->bssid.mac_addr31to0,
-			    synch_event->bssid.mac_addr47to32);
+	//wlan_roam_debug_log(synch_event->vdev_id, DEBUG_ROAM_SYNCH_IND,
+	//		    DEBUG_INVALID_PEER_ID, NULL, NULL,
+	//		    synch_event->bssid.mac_addr31to0,
+	//		    synch_event->bssid.mac_addr47to32);
 	DPTRACE(qdf_dp_trace_record_event(QDF_DP_TRACE_EVENT_RECORD,
 		synch_event->vdev_id, QDF_TRACE_DEFAULT_PDEV_ID,
 		QDF_PROTO_TYPE_EVENT, QDF_ROAM_SYNCH));
@@ -4223,8 +4223,8 @@ void wma_process_roam_synch_complete(WMA_HANDLE handle, uint8_t vdev_id)
 		QDF_PROTO_TYPE_EVENT, QDF_ROAM_COMPLETE));
 
 	WMA_LOGI("LFR3: Posting WMA_ROAM_OFFLOAD_SYNCH_CNF");
-	wlan_roam_debug_log(vdev_id, DEBUG_ROAM_SYNCH_CNF,
-			    DEBUG_INVALID_PEER_ID, NULL, NULL, 0, 0);
+	//wlan_roam_debug_log(vdev_id, DEBUG_ROAM_SYNCH_CNF,
+	//		    DEBUG_INVALID_PEER_ID, NULL, NULL, 0, 0);
 
 }
 #endif /* WLAN_FEATURE_ROAM_OFFLOAD */

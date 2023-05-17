@@ -9812,7 +9812,7 @@ static int __wlan_hdd_cfg80211_wifi_logger_get_ring_data(struct wiphy *wiphy,
 			tb[QCA_WLAN_VENDOR_ATTR_WIFI_LOGGER_GET_RING_DATA_ID]);
 
 	if (ring_id == RING_ID_PER_PACKET_STATS) {
-		wlan_logging_set_per_pkt_stats();
+		//wlan_logging_set_per_pkt_stats();
 		hdd_debug("Flushing/Retrieving packet stats");
 	} else if (ring_id == RING_ID_DRIVER_DEBUG) {
 		/*
@@ -9830,10 +9830,10 @@ static int __wlan_hdd_cfg80211_wifi_logger_get_ring_data(struct wiphy *wiphy,
 			return -EINVAL;
 		}
 	} else {
-		wlan_report_log_completion(WLAN_LOG_TYPE_NON_FATAL,
-					   WLAN_LOG_INDICATOR_FRAMEWORK,
-					   WLAN_LOG_REASON_CODE_UNUSED,
-					   ring_id);
+		//wlan_report_log_completion(WLAN_LOG_TYPE_NON_FATAL,
+		//			   WLAN_LOG_INDICATOR_FRAMEWORK,
+		//			   WLAN_LOG_REASON_CODE_UNUSED,
+		//			   ring_id);
 	}
 	return 0;
 }
