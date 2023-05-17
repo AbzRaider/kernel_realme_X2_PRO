@@ -2100,7 +2100,7 @@ static int wma_flush_complete_evt_handler(void *handle,
 		status = qdf_mc_timer_stop(&wma->log_completion_timer);
 		if (status != QDF_STATUS_SUCCESS)
 			WMA_LOGE("Failed to stop the log completion timeout");
-		cds_logging_set_fw_flush_complete();
+		//cds_logging_set_fw_flush_complete();
 		return QDF_STATUS_SUCCESS;
 	} else if (reason_code && cds_is_log_report_in_progress() == false) {
 		/* Asynchronous flush event for fatal events */
@@ -2112,7 +2112,7 @@ static int wma_flush_complete_evt_handler(void *handle,
 					__func__);
 			return QDF_STATUS_E_FAILURE;
 		}
-		cds_logging_set_fw_flush_complete();
+		//cds_logging_set_fw_flush_complete();
 		return status;
 	} else {
 		/* Asynchronous flush event for fatal event,
@@ -9072,7 +9072,7 @@ void wma_log_completion_timeout(void *data)
 	/* Though we did not receive any event from FW,
 	 * we can flush whatever logs we have with us
 	 */
-	cds_logging_set_fw_flush_complete();
+	//cds_logging_set_fw_flush_complete();
 }
 
 /**
